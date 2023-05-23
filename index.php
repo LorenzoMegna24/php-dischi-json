@@ -9,8 +9,23 @@
 </head>
 <body>
   <div id="app">
-    <h1>Lista dischi</h1>
-
+    <div style="background: rgb(99,249,134); background: linear-gradient(294deg, rgba(99,249,134,1) 0%, rgba(81,43,174,1) 37%);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-between flex-wrap">
+            <div class="card w-25 mx-1 mb-4 border-0 text-center shadow" style="background-color:rgb(103, 103, 231) ;" v-for="(element,index) in data" :key="index">
+              <img :src="element.poster" class="card-img-top w-75 mx-auto rounded-0 pt-2" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ element.title }}</h5>
+                <span class="d-block">{{ element.author }}</span>
+                <span class="d-block">{{ element.year }}</span>
+                <span class="d-block">{{ element.genre }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 

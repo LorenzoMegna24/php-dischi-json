@@ -4,11 +4,13 @@ createApp({
   data() {
     return {
       urlApi: 'apis/dischi.php',
+      data:[]
     }
   },
   methods: {
     callApi(){
       axios.get( this.urlApi ).then( (res)=>{
+        
         this.data = res.data
       })
     }
